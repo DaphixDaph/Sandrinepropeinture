@@ -7,7 +7,7 @@
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const money = n => Number(n).toLocaleString('fr-CA') + ' $';
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const d = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
 
@@ -41,6 +41,10 @@ export default async function handler(req, res) {
       html
     })
   });
-  if (!r.ok) return res.status(502).json({ error: 'Échec de l’envoi' });
+  if (!r.ok) {
+    const t = await r.text();
+    console.error('Resend error', r.status, t);
+    return res.status(502).json({ error: 'Échec de l’envoi', status: r.status, detail: t });
+  }
   return res.status(200).json({ ok: true });
 }
