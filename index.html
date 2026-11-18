@@ -3,8 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sandrine Peintre en bâtiment | Soumission gratuite à Montréal</title>
-<meta name="description" content="Peintre en bâtiment à Montréal. Peinture résidentielle et commerciale, finitions impeccables. Obtenez une estimation instantanée et une soumission gratuite.">
+<title>Sandrine Peintre en bâtiment | Soumission gratuite à Montréal et environs</title>
+<meta name="description" content="Sandrine, peintre en bâtiment à Montréal et environs. Peinture résidentielle et commerciale, finitions impeccables. Estimation en ligne et soumission gratuite.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:site_name" content="Sandrine Peintre en bâtiment">
+<meta property="og:title" content="Sandrine Peintre en bâtiment | Montréal et environs">
+<meta property="og:description" content="Peintre en bâtiment à Montréal et environs. Peinture résidentielle et commerciale, finitions impeccables. Soumission gratuite.">
+<meta property="og:url" content="https://www.sandrinepropeinture.com/">
+<meta property="og:image" content="https://www.sandrinepropeinture.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aperçu de la soumission en ligne : estimation instantanée selon le nombre de pièces">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.sandrinepropeinture.com/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -372,6 +384,8 @@ const today=new Date().toISOString().slice(0,10);$('#d1').min=today;$('#d2').min
 document.querySelectorAll('.ba').forEach(b=>{const r=b.querySelector('input');r.addEventListener('input',()=>b.style.setProperty('--p',r.value+'%'))});
 
 /* envoi */
+const API_TIMEOUT=8000, FS_TIMEOUT=12000;
+const tfetch=(url,opts,ms)=>{const c=new AbortController();const t=setTimeout(()=>c.abort(),ms);return fetch(url,{...opts,signal:c.signal}).finally(()=>clearTimeout(t))};
 $('#qf').addEventListener('submit',async e=>{
  e.preventDefault();const err=$('#err');err.textContent='';
  const f=e.target,fd=new FormData(f);
@@ -382,20 +396,23 @@ $('#qf').addEventListener('submit',async e=>{
   nom:fd.get('nom'),telephone:fd.get('telephone'),courriel:fd.get('courriel'),adresse:fd.get('adresse'),website:fd.get('website'),
   estimation:{heures_min:rooms*H_MIN,heures_max:rooms*H_MAX,prix_min:rooms*H_MIN*RATE,prix_max:rooms*H_MAX*RATE,taux:RATE}
  };
+ const eS=data.estimation;
+ const L=['Nom: '+data.nom,'Téléphone: '+data.telephone,'Courriel: '+data.courriel,'Type: '+data.type,'Pièces: '+data.pieces,'Estimation: '+eS.heures_min+'-'+eS.heures_max+' h x '+eS.taux+' $/h = '+fmt(eS.prix_min)+' à '+fmt(eS.prix_max)+' (avant taxes, peinture non incluse)','Couleurs: '+(data.couleurs.join(', ')||'-'),'Autre couleur/code: '+(data.codes||'-'),'Conseils de couleurs: '+(data.conseil?'oui':'non'),'Début souhaité: '+(data.date_debut||'-'),'Date limite: '+(data.date_fin||'-'),'Dates flexibles: '+(data.flexible?'oui':'non'),'Adresse: '+(data.adresse||'-'),'Description: '+(data.description||'-')];
  const btn=$('#send');btn.disabled=true;btn.textContent='Envoi en cours…';
- try{
-  let ok=false;
-  try{const r=await fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});ok=r.ok}catch(_){}
-  if(!ok){ // secours : FormSubmit (aucune clé requise)
-   const e=data.estimation,L=[];
-   L.push('Type: '+data.type,'Pièces: '+data.pieces,'Estimation: '+e.heures_min+'-'+e.heures_max+' h x '+e.taux+' $/h = '+fmt(e.prix_min)+' à '+fmt(e.prix_max)+' (avant taxes, peinture non incluse)','Couleurs: '+(data.couleurs.join(', ')||'-'),'Autre couleur/code: '+(data.codes||'-'),'Conseils de couleurs: '+(data.conseil?'oui':'non'),'Début souhaité: '+(data.date_debut||'-'),'Date limite: '+(data.date_fin||'-'),'Dates flexibles: '+(data.flexible?'oui':'non'),'Adresse: '+(data.adresse||'-'),'Description: '+(data.description||'-'));
-   const r2=await fetch('https://formsubmit.co/ajax/'+SECOURS_EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_cc:SECOURS_CC,_subject:'Soumission – '+data.nom+' – '+data.pieces+' pièce(s)',_template:'table',_captcha:'false',_replyto:data.courriel,email:data.courriel,nom:data.nom,telephone:data.telephone,message:L.join('\n')})});
-   const j=await r2.json().catch(()=>({}));
+ let ok=false;
+ try{const r=await tfetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)},API_TIMEOUT);ok=r.ok}catch(x){console.warn('api/quote',x)}
+ if(!ok){ // secours : FormSubmit (aucune clé requise)
+  try{
+   const r2=await tfetch('https://formsubmit.co/ajax/'+SECOURS_EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_cc:SECOURS_CC,_subject:'Soumission – '+data.nom+' – '+data.pieces+' pièce(s)',_template:'table',_captcha:'false',_replyto:data.courriel,email:data.courriel,nom:data.nom,telephone:data.telephone,message:L.join('\n')})},FS_TIMEOUT);
+   const j=await r2.json().catch(()=>({}));console.warn('formsubmit',r2.status,j);
    ok=r2.ok&&String(j.success)!=='false';
-  }
-  if(!ok)throw new Error();
-  $('#formBody').style.display='none';$('#ok').style.display='block';$('#soumission').scrollIntoView({behavior:'smooth'});
- }catch(x){err.textContent='Oups, l’envoi a échoué. Appelez Sandrine au 514-424-8733 ou écrivez à sandrine_454@hotmail.com.';btn.disabled=false;btn.textContent='Envoyer ma demande de soumission →'}
+  }catch(x){console.warn('formsubmit',x)}
+ }
+ if(ok){$('#formBody').style.display='none';$('#ok').style.display='block';$('#soumission').scrollIntoView({behavior:'smooth'});return}
+ // plan B : courriel prérempli
+ const mail='mailto:'+SECOURS_EMAIL+'?cc='+encodeURIComponent(SECOURS_CC)+'&subject='+encodeURIComponent('Demande de soumission – '+data.nom)+'&body='+encodeURIComponent(L.join('\n'));
+ err.innerHTML='L’envoi automatique n’a pas fonctionné. <a href="'+mail+'" style="color:inherit;font-weight:700">Cliquez ici pour envoyer votre demande par courriel</a>, ou appelez Sandrine au 514-424-8733.';
+ btn.disabled=false;btn.textContent='Envoyer ma demande de soumission →';
 });
 </script>
 </body>
