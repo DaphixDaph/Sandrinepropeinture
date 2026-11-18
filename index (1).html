@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sandrine Peintre en bâtiment | Soumission gratuite à Montréal</title>
+<meta name="description" content="Peintre en bâtiment à Montréal. Peinture résidentielle et commerciale, finitions impeccables. Obtenez une estimation instantanée et une soumission gratuite.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#234E7D;--navy-d:#183A60;--cream:#F7F5F0;--card:#FDFCFA;--line:#E6DFD2;--ink:#1B1B1B;--mut:#5E5E5E;--r:22px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+h1{font-size:clamp(2.6rem,6vw,4.6rem)}
+h2{font-size:clamp(2rem,4vw,3rem)}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.kick{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--navy)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;border:0;cursor:pointer;font:inherit;font-weight:700;box-shadow:0 10px 24px rgba(35,78,125,.28);transition:transform .15s,background .15s}
+.btn:hover{background:var(--navy-d);transform:translateY(-2px)}
+.btn.ghost{background:#fff;color:var(--navy);box-shadow:none;border:1.5px solid var(--line)}
+.btn.ghost:hover{background:#fff;border-color:var(--navy)}
+section{padding:90px 0}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-size:.8rem;letter-spacing:.32em;text-transform:uppercase;font-weight:700;text-decoration:none}
+nav{display:flex;gap:26px;align-items:center;font-size:.92rem}
+nav a{text-decoration:none;color:var(--mut)}
+nav a:hover{color:var(--navy)}
+nav .tel{white-space:nowrap;padding:9px 18px;border:1.5px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-weight:700}
+/* hero */
+.hero{padding:70px 0 90px;background:radial-gradient(1000px 500px at 85% 0,#dfe8f0 0,transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.pill{display:inline-block;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:.85rem;color:var(--navy);margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--navy)}
+.hero p.lead{margin-top:22px;font-size:1.12rem;color:var(--mut);max-width:34em}
+.hero .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px}
+.stats{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
+.stat{background:#fff;border-radius:16px;padding:14px 20px;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+.stat b{display:block;font-size:1.35rem}
+.stat span{font-size:.82rem;color:var(--mut)}
+.frame{background:#fff;border-radius:38px;padding:14px;box-shadow:0 30px 60px rgba(30,60,90,.2);max-width:620px;margin-left:auto}
+.frame .in{background:#EFEDE6;border-radius:28px;aspect-ratio:5/5.9;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.collage{width:96%;display:grid;grid-template-columns:37% minmax(0,1fr);gap:4px;background:#FBFAF6;border-radius:6px;overflow:hidden}
+.collage .l{min-width:0;display:flex;flex-direction:column;background:#FBFAF6}
+.collage .l img{width:100%;height:auto;aspect-ratio:1/1.05;object-fit:cover;object-position:50% 20%}
+.collage .cap{padding:12px 10px 14px;font-family:'Cormorant Garamond',serif;font-size:clamp(.8rem,1.5vw,1.05rem);line-height:1.3;color:#222}
+.collage .cap em{font-style:normal;color:var(--navy)}
+.collage .cap hr{border:0;border-top:1.5px solid var(--navy);width:28px;margin:10px 0 8px;opacity:.7}
+.collage .cap small{display:block;font-family:'Manrope',sans-serif;font-size:.5rem;line-height:1.4;color:#555}
+.collage .sig{display:block;margin-top:10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:1.25rem;color:var(--navy)}
+.collage .r{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px;align-content:start}
+.collage .th{position:relative;aspect-ratio:4/3}
+.collage .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:4px}
+.collage .th i{position:absolute;top:5px;left:5px;font-style:normal;font-size:.55rem;font-weight:700;padding:2px 7px;border-radius:999px;background:rgba(30,30,30,.75);color:#fff}
+.collage .th.ap i{background:var(--navy)}
+.collage .th.av::after{content:"›";position:absolute;right:-9px;top:50%;transform:translateY(-50%);z-index:2;width:16px;height:16px;border-radius:50%;background:#fff;color:#333;font-size:.8rem;line-height:15px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+/* why */
+.why{background:#F3EFE7}
+.head{text-align:center;max-width:720px;margin:0 auto 46px}
+.head p{margin-top:14px;color:var(--mut)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px}
+.card .ic{width:46px;height:46px;border-radius:14px;background:#E8EDF3;display:grid;place-items:center;margin-bottom:16px;color:var(--navy)}
+.card h3{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:6px}
+.card p{font-size:.92rem;color:var(--mut)}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.ba{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:#ddd;box-shadow:0 18px 40px rgba(0,0,0,.12);user-select:none;--p:50%}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .top{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.ba .tag{position:absolute;top:14px;padding:5px 12px;border-radius:999px;background:rgba(0,0,0,.6);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.06em;z-index:3}
+.ba .tag.l{left:14px}.ba .tag.r{right:14px;background:var(--navy)}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--p);width:3px;background:#fff;transform:translateX(-50%);z-index:2;box-shadow:0 0 12px rgba(0,0,0,.4)}
+.ba .bar::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--navy);font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0}
+/* process */
+.process{background:#F3EFE7}
+.step .n{font-size:.72rem;letter-spacing:.22em;font-weight:700;color:var(--navy);margin-bottom:10px;display:block}
+/* quote */
+.quote{background:linear-gradient(180deg,var(--cream),#E9EEF3)}
+.qbox{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+form{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:38px;box-shadow:0 24px 60px rgba(30,60,90,.12)}
+fieldset{border:0;padding:0;margin:0 0 30px}
+legend{font-weight:700;font-size:1.05rem;padding:0;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+legend i{font-style:normal;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.85rem}
+.hint{font-size:.85rem;color:var(--mut);margin-bottom:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label.f{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+input[type=text],input[type=email],input[type=tel],input[type=date],textarea,select{width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:14px;background:#FAF8F3;font:inherit;color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:3px solid rgba(35,78,125,.22);border-color:var(--navy)}
+textarea{min-height:130px;resize:vertical}
+.seg{display:flex;gap:10px;flex-wrap:wrap}
+.seg label{cursor:pointer}
+.seg input{position:absolute;opacity:0}
+.seg span{display:inline-block;padding:11px 20px;border:1.5px solid var(--line);border-radius:999px;background:#fff;font-weight:600;font-size:.92rem}
+.seg input:checked+span{background:var(--navy);color:#fff;border-color:var(--navy)}
+.seg input:focus-visible+span{outline:3px solid rgba(35,78,125,.3)}
+.stepper{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;background:#fff;overflow:hidden}
+.stepper button{width:52px;height:52px;border:0;background:none;font-size:1.5rem;cursor:pointer;color:var(--navy)}
+.stepper button:hover{background:#EEF2F6}
+.stepper output{min-width:64px;text-align:center;font-size:1.4rem;font-weight:700}
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:12px;margin-bottom:14px}
+.sw label{cursor:pointer;position:relative;display:block}
+.sw input{position:absolute;opacity:0}
+.sw .c{display:block;height:64px;border-radius:14px;border:1.5px solid rgba(0,0,0,.12);transition:transform .12s}
+.sw .t{display:block;font-size:.76rem;line-height:1.25;margin-top:6px;font-weight:600}
+.sw .t small{display:block;color:var(--mut);font-weight:500}
+.sw input:checked+.c{outline:3px solid var(--navy);outline-offset:2px;transform:scale(1.03)}
+.sw input:checked+.c::after{content:"✓";display:grid;place-items:center;height:100%;font-weight:800;color:var(--ck,#fff);font-size:1.3rem;text-shadow:0 1px 3px rgba(0,0,0,.35)}
+.sw input:focus-visible+.c{outline:3px solid var(--navy)}
+.chk{display:flex;gap:10px;align-items:center;font-size:.92rem;margin-top:12px}
+.chk input{width:18px;height:18px;accent-color:var(--navy)}
+.hp{position:absolute;left:-9999px;opacity:0}
+.err{color:#B3261E;font-size:.88rem;margin-top:10px;min-height:1.2em}
+/* estimate card */
+.est{position:sticky;top:96px;background:linear-gradient(160deg,#2c5e93,#183A60);color:#fff;border-radius:28px;padding:32px;box-shadow:0 26px 60px rgba(24,58,96,.4)}
+.est .kick{color:#BFD6EC}
+.est .big{font-family:'Cormorant Garamond',serif;font-size:2.7rem;font-weight:600;line-height:1.1;margin:10px 0 4px}
+.est ul{list-style:none;padding:0;margin:20px 0;border-top:1px solid rgba(255,255,255,.2)}
+.est li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:.92rem}
+.est .note{font-size:.8rem;color:#CFE0F0;line-height:1.55}
+.est .btn{width:100%;justify-content:center;background:#fff;color:var(--navy);margin-top:18px}
+.est .btn:hover{background:#F0F5FA}
+/* contact + footer */
+.contact{background:#fff}
+.cwrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.cl{display:grid;gap:12px;margin-top:22px;color:var(--mut)}
+.callbox{margin-top:22px;border:1px solid #C9D5E2;background:#F2F5F9;border-radius:18px;padding:18px 22px}
+.callbox b{display:block;font-size:1.6rem;color:var(--ink)}
+.cta-band{background:linear-gradient(135deg,#2c5e93,#183A60);color:#fff;border-radius:32px;padding:56px 32px;text-align:center}
+.cta-band p{max-width:34em;margin:14px auto 26px;color:#DCE8F4}
+footer{padding:34px 0 90px;text-align:center;font-size:.85rem;color:var(--mut)}
+.float{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--navy);color:#fff;text-decoration:none;border-radius:18px;padding:12px 18px;box-shadow:0 12px 30px rgba(0,0,0,.3);font-size:.78rem;letter-spacing:.08em}
+.float b{display:block;font-size:1rem;letter-spacing:0}
+.ok{display:none;text-align:center;padding:40px 10px}
+.ok h3{font-size:2.2rem;margin-bottom:10px}
+@media(max-width:980px){.hero .wrap,.qbox,.cwrap{grid-template-columns:minmax(0,1fr)}.grid4{grid-template-columns:1fr 1fr}.est{position:static}nav a:not(.tel){display:none}}
+@media(max-width:640px){.logo{font-size:.62rem;letter-spacing:.2em}.pill{font-size:.78rem}section{padding:64px 0}.grid4,.gal,.row{grid-template-columns:1fr}form{padding:24px 18px}.hero{padding-top:40px}.float{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+  <a class="logo" href="#">Sandrine Alepins-Tremblay</a>
+  <nav>
+   <a href="#realisations">Réalisations</a><a href="#services">Services</a><a href="#soumission">Soumission</a><a href="#contact">Contact</a>
+   <a class="tel" href="tel:+15144248733">514-424-8733</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+ <div class="wrap">
+  <div>
+   <span class="pill">Peinture résidentielle · Commerciale · Travail minutieux</span>
+   <h1>Bonjour, je<br>suis <em>Sandrine.</em><br>Peintre en bâtiment<br>à Montréal.</h1>
+   <p class="lead">Des finitions impeccables, un service rassurant et un résultat qui redonne à votre espace une vraie présence. Obtenez votre estimation en 2 minutes, sans engagement.</p>
+   <div class="cta">
+    <a class="btn" href="#soumission">Obtenir ma soumission gratuite →</a>
+    <a class="btn ghost" href="tel:+15144248733">Appeler 514-424-8733</a>
+   </div>
+   <div class="stats">
+    <div class="stat"><b>Gratuite</b><span>Soumission sans engagement</span></div>
+    <div class="stat"><b>55 $/h</b><span>Tarif clair, sans surprise</span></div>
+    <div class="stat"><b>Montréal</b><span>et environs</span></div>
+   </div>
+  </div>
+  <div class="frame"><div class="in"><div class="collage">
+    <div class="l"><img src="sandrine.jpg" alt="Sandrine, peintre en bâtiment" width="900" height="900"><div class="cap">Avant, c’était un projet.<br><em>Après, c’est chez vous.</em><hr><small>Peinture résidentielle et commerciale<br>Travail minutieux · Finitions durables</small><span class="sig">Sandrine</span></div></div>
+    <div class="r"><div class="th av"><img src="p1-avant.jpg" alt="Avant peinture, projet 1" loading="lazy"><i>Avant</i></div><div class="th ap"><img src="p1-apres.jpg" alt="Après peinture, projet 1" loading="lazy"><i>Après</i></div><div class="th av"><img src="p2-avant.jpg" alt="Avant peinture, projet 2" loading="lazy"><i>Avant</i></div><div class="th ap"><img src="p2-apres.jpg" alt="Après peinture, projet 2" loading="lazy"><i>Après</i></div><div class="th av"><img src="p3-avant.jpg" alt="Avant peinture, projet 3" loading="lazy"><i>Avant</i></div><div class="th ap"><img src="p3-apres.jpg" alt="Après peinture, projet 3" loading="lazy"><i>Après</i></div><div class="th av"><img src="p4-avant.jpg" alt="Avant peinture, projet 4" loading="lazy"><i>Avant</i></div><div class="th ap"><img src="p4-apres.jpg" alt="Après peinture, projet 4" loading="lazy"><i>Après</i></div></div>
+   </div></div></div>
+  </div>
+ </section>
+
+<!-- POURQUOI -->
+<section class="why" id="services">
+ <div class="wrap">
+  <div class="head"><span class="kick">Pourquoi choisir Sandrine ?</span><h2>Un travail minutieux. Une expérience sans souci.</h2><p>Chaque projet est réalisé avec le même souci du détail, du premier coup de pinceau jusqu’au nettoyage final.</p></div>
+  <div class="grid4">
+   <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg></div><h3>Travail soigné</h3><p>Chaque surface est préparée avec soin pour assurer un résultat durable et impeccable.</p></div>
+   <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg></div><h3>Finitions impeccables</h3><p>Lignes nettes, découpes précises et souci du détail qui font toute la différence.</p></div>
+   <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Respect des délais</h3><p>Communication claire, ponctualité et chantier organisé du début à la fin.</p></div>
+   <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg></div><h3>Résidentiel et commercial</h3><p>Maisons, condos, logements, bureaux et commerces partout dans la région de Montréal.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- AVANT / APRES -->
+<section id="realisations">
+ <div class="wrap">
+  <div class="head"><span class="kick">Réalisations</span><h2>Glissez pour voir la transformation.</h2><p>Des projets réels, réalisés à Montréal. Déplacez la barre pour comparer l’avant et l’après.</p></div>
+  <div class="gal">
+   <div class="ba"><img src="p1-apres.jpg" alt="Salon après peinture" loading="lazy"><img class="top" src="p1-avant.jpg" alt="Salon avant peinture" loading="lazy"><span class="tag l">AVANT</span><span class="tag r">APRÈS</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div>
+   <div class="ba"><img src="p2-apres.jpg" alt="Chambre après peinture avec mur d’accent bleu" loading="lazy"><img class="top" src="p2-avant.jpg" alt="Chambre avant peinture" loading="lazy"><span class="tag l">AVANT</span><span class="tag r">APRÈS</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div>
+   <div class="ba"><img src="p3-apres.jpg" alt="Corridor après peinture" loading="lazy"><img class="top" src="p3-avant.jpg" alt="Corridor avant peinture" loading="lazy"><span class="tag l">AVANT</span><span class="tag r">APRÈS</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div>
+   <div class="ba"><img src="p4-apres.jpg" alt="Salon lumineux après peinture" loading="lazy"><img class="top" src="p4-avant.jpg" alt="Salon avant peinture" loading="lazy"><span class="tag l">AVANT</span><span class="tag r">APRÈS</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div>
+  </div>
+  <p style="text-align:center;margin-top:34px"><a class="btn" href="#soumission">Je veux le même résultat chez moi →</a></p>
+ </div>
+</section>
+
+<!-- PROCESSUS -->
+<section class="process">
+ <div class="wrap">
+  <div class="head"><span class="kick">Comment ça fonctionne</span><h2>Un processus simple, transparent et efficace.</h2></div>
+  <div class="grid4">
+   <div class="card step"><span class="n">1 · ESTIMATION</span><h3>Calculez votre projet</h3><p>Choisissez le nombre de pièces, vos couleurs et vos dates. Vous voyez le prix tout de suite.</p></div>
+   <div class="card step"><span class="n">2 · SOUMISSION</span><h3>Réponse rapide</h3><p>Sandrine vous contacte pour valider les détails et confirmer une soumission, sans engagement.</p></div>
+   <div class="card step"><span class="n">3 · RÉALISATION</span><h3>Travaux soignés</h3><p>Protection des lieux, découpes, peinture et finition exécutées avec précision.</p></div>
+   <div class="card step"><span class="n">4 · RÉSULTAT</span><h3>Inspection finale</h3><p>Vérification avec vous et nettoyage complet avant le départ.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- SOUMISSION -->
+<section class="quote" id="soumission">
+ <div class="wrap">
+  <div class="head"><span class="kick">Soumission en ligne</span><h2>Votre estimation en 2 minutes.</h2><p>Remplissez le formulaire : le prix estimé se met à jour en direct, et Sandrine reçoit votre demande par courriel.</p></div>
+  <div class="qbox">
+   <form id="qf" novalidate>
+    <div id="formBody">
+    <fieldset>
+     <legend><i>1</i>Type de projet</legend>
+     <div class="seg">
+      <label><input type="radio" name="type" value="Résidentiel" checked><span>Résidentiel</span></label>
+      <label><input type="radio" name="type" value="Commercial"><span>Commercial</span></label>
+     </div>
+    </fieldset>
+
+    <fieldset>
+     <legend><i>2</i>Nombre de pièces à peindre</legend>
+     <p class="hint">Estimé à 6 à 8 h par pièce (découpes, peinture, finition). Salon, chambre, cuisine, corridor, etc.</p>
+     <div class="stepper"><button type="button" id="minus" aria-label="Moins">−</button><output id="rooms">1</output><button type="button" id="plus" aria-label="Plus">+</button></div>
+     <input type="hidden" name="pieces" id="piecesInput" value="1">
+    </fieldset>
+
+    <fieldset>
+     <legend><i>3</i>Choix de couleurs Bétonel</legend>
+     <p class="hint">Sélectionnez une ou plusieurs teintes. Les couleurs à l’écran sont approximatives : Sandrine valide avec les nuanciers en magasin. La peinture n’est pas incluse dans l’estimation.</p>
+     <div class="sw" id="swatches"></div>
+     <label class="f" for="codes">Autre couleur ? Nom ou code Bétonel</label>
+     <input type="text" id="codes" name="codes" placeholder="Ex. nom ou code de la couleur choisie">
+     <label class="chk"><input type="checkbox" name="conseil" value="oui"> Je veux des conseils de couleurs</label>
+    </fieldset>
+
+    <fieldset>
+     <legend><i>4</i>Dates souhaitées</legend>
+     <div class="row">
+      <div><label class="f" for="d1">Début souhaité</label><input type="date" id="d1" name="date_debut"></div>
+      <div><label class="f" for="d2">Date limite (facultatif)</label><input type="date" id="d2" name="date_fin"></div>
+     </div>
+     <label class="chk"><input type="checkbox" name="flexible" value="oui"> Mes dates sont flexibles</label>
+    </fieldset>
+
+    <fieldset>
+     <legend><i>5</i>Description du projet</legend>
+     <textarea name="description" id="desc" placeholder="Pièces à peindre, hauteur des plafonds, état des murs, plafonds / boiseries inclus ou non, logement vide ou meublé…"></textarea>
+    </fieldset>
+
+    <fieldset>
+     <legend><i>6</i>Vos coordonnées</legend>
+     <div class="row">
+      <div><label class="f" for="nom">Nom *</label><input type="text" id="nom" name="nom" autocomplete="name" required></div>
+      <div><label class="f" for="tel">Téléphone *</label><input type="tel" id="tel" name="telephone" autocomplete="tel" required></div>
+     </div>
+     <div class="row" style="margin-top:16px">
+      <div><label class="f" for="email">Courriel *</label><input type="email" id="email" name="courriel" autocomplete="email" required></div>
+      <div><label class="f" for="ville">Adresse du projet / quartier</label><input type="text" id="ville" name="adresse" autocomplete="address-level2" placeholder="Ex. Rosemont, Montréal"></div>
+     </div>
+    </fieldset>
+
+    <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" type="submit" id="send">Envoyer ma demande de soumission →</button>
+    <p class="err" id="err" role="alert"></p>
+    </div>
+    <div class="ok" id="ok"><h3>Merci ! Votre demande est envoyée.</h3><p>Sandrine vous répondra rapidement. Pour une réponse immédiate, appelez le <a href="tel:+15144248733"><b>514-424-8733</b></a>.</p></div>
+   </form>
+
+   <aside class="est" aria-live="polite">
+    <span class="kick">Estimation avant taxes</span>
+    <div class="big" id="price">330 $ – 440 $</div>
+    <div style="color:#CFE0F0;font-size:.9rem" id="hours">6 h – 8 h de travail</div>
+    <ul>
+     <li><span>Pièces</span><b id="sPieces">1</b></li>
+     <li><span>Taux horaire</span><b>55 $/h</b></li>
+     <li><span>Découpes, peinture, finition</span><b style="white-space:nowrap">4 h · 2 h · 2 h</b></li>
+     <li><span>Peinture</span><b>non incluse</b></li>
+    </ul>
+    <p class="note">Estimation non contractuelle. Le prix final est confirmé par Sandrine après validation du projet (état des murs, hauteur, plafonds, réparations). Taxes en sus. Un acompte de 15 % est exigé pour réserver la date.</p>
+    <a class="btn" href="#send">Envoyer ma demande</a>
+   </aside>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+ <div class="wrap cwrap">
+  <div>
+   <span class="kick">Contact</span>
+   <h2 style="margin-top:12px">Discutons de votre projet.</h2>
+   <p style="margin-top:16px;color:var(--mut)">Que votre besoin soit résidentiel ou commercial, je réponds rapidement avec une soumission claire et personnalisée.</p>
+   <div class="callbox"><span class="kick">Appelez-moi directement</span><b>514-424-8733</b></div>
+   <div class="cl"><span>✉ sandrine_454@hotmail.com</span><span>⌖ Montréal, Québec</span><span>★ Garantie de satisfaction et qualité de finition</span><span>f Facebook : Sandrine Peintre en bâtiment</span></div>
+  </div>
+  <div class="cta-band">
+   <h2>Confiez la transformation de votre espace à une main-d’œuvre minutieuse.</h2>
+   <p>Soumission claire, personnalisée et adaptée à votre projet. Acompte de 15 % pour réserver la date ; solde payé à la livraison.</p>
+   <a class="btn ghost" href="#soumission">Obtenir ma soumission</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> Sandrine Alepins-Tremblay · Peintre en bâtiment · Montréal</div></footer>
+<a class="float" href="tel:+15144248733">APPELEZ SANDRINE<b>514-424-8733</b></a>
+
+<script>
+/* ===== RÉGLAGES (modifiables) ===== */
+const RATE = 55;            // $ / heure
+const H_MIN = 6, H_MAX = 8; // heures par pièce
+const MAX_ROOMS = 20;
+const SECOURS_EMAIL = 'sandrine_454@hotmail.com'; // courriel de réception (service de secours)
+const SECOURS_CC = 'info@daphixstudio.com';      // copie conforme
+/* Palette Bétonel : remplacez name/code/hex par les vraies teintes (hex = approximation à l'écran) */
+const COLORS = [
+ {name:"Blanc pur",code:"",hex:"#FFFFFF"},
+ {name:"Blanc cassé",code:"",hex:"#F2EFE6"},
+ {name:"Gris très pâle",code:"",hex:"#E4E4E0"},
+ {name:"Gris pâle",code:"",hex:"#CFCFCB"},
+ {name:"Greige",code:"",hex:"#CBC3B4"},
+ {name:"Beige sable",code:"",hex:"#D9CBB2"},
+ {name:"Gris moyen",code:"",hex:"#A9ABA8"},
+ {name:"Gris anthracite",code:"",hex:"#5A5D61"},
+ {name:"Bleu poudre",code:"",hex:"#BFD2DF"},
+ {name:"Bleu ardoise",code:"",hex:"#4F6B85"},
+ {name:"Bleu marine",code:"",hex:"#2B3F58"},
+ {name:"Vert sauge",code:"",hex:"#A9B5A0"},
+ {name:"Noir profond",code:"",hex:"#1E1F21"}
+];
+/* ================================== */
+const $=s=>document.querySelector(s);
+const fmt=n=>n.toLocaleString('fr-CA')+' $';
+let rooms=1;
+function lum(h){const n=parseInt(h.slice(1),16);return (0.299*(n>>16)+0.587*((n>>8)&255)+0.114*(n&255))}
+function renderSw(){
+ $('#swatches').innerHTML=COLORS.map((c,i)=>`<label><input type="checkbox" name="couleurs" value="${c.name}${c.code?' ('+c.code+')':''}"><span class="c" style="background:${c.hex};--ck:${lum(c.hex)>150?'#1b1b1b':'#fff'}"></span><span class="t">${c.name}${c.code?`<small>${c.code}</small>`:''}</span></label>`).join('');
+}
+function update(){
+ $('#rooms').textContent=rooms;$('#piecesInput').value=rooms;$('#sPieces').textContent=rooms;
+ const lo=rooms*H_MIN,hi=rooms*H_MAX;
+ $('#price').textContent=fmt(lo*RATE)+' – '+fmt(hi*RATE);
+ $('#hours').textContent=lo+' h – '+hi+' h de travail';
+}
+$('#plus').onclick=()=>{rooms=Math.min(MAX_ROOMS,rooms+1);update()};
+$('#minus').onclick=()=>{rooms=Math.max(1,rooms-1);update()};
+renderSw();update();
+$('#yr').textContent=new Date().getFullYear();
+const today=new Date().toISOString().slice(0,10);$('#d1').min=today;$('#d2').min=today;
+
+/* curseurs avant/après */
+document.querySelectorAll('.ba').forEach(b=>{const r=b.querySelector('input');r.addEventListener('input',()=>b.style.setProperty('--p',r.value+'%'))});
+
+/* envoi */
+$('#qf').addEventListener('submit',async e=>{
+ e.preventDefault();const err=$('#err');err.textContent='';
+ const f=e.target,fd=new FormData(f);
+ if(!fd.get('nom').trim()||!fd.get('telephone').trim()||!/^\S+@\S+\.\S+$/.test(fd.get('courriel'))){err.textContent='Veuillez entrer votre nom, un téléphone et un courriel valides.';return}
+ const data={
+  type:fd.get('type'),pieces:rooms,couleurs:fd.getAll('couleurs'),codes:fd.get('codes'),conseil:!!fd.get('conseil'),
+  date_debut:fd.get('date_debut'),date_fin:fd.get('date_fin'),flexible:!!fd.get('flexible'),description:fd.get('description'),
+  nom:fd.get('nom'),telephone:fd.get('telephone'),courriel:fd.get('courriel'),adresse:fd.get('adresse'),website:fd.get('website'),
+  estimation:{heures_min:rooms*H_MIN,heures_max:rooms*H_MAX,prix_min:rooms*H_MIN*RATE,prix_max:rooms*H_MAX*RATE,taux:RATE}
+ };
+ const btn=$('#send');btn.disabled=true;btn.textContent='Envoi en cours…';
+ try{
+  let ok=false;
+  try{const r=await fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});ok=r.ok}catch(_){}
+  if(!ok){ // secours : FormSubmit (aucune clé requise)
+   const e=data.estimation,L=[];
+   L.push('Type: '+data.type,'Pièces: '+data.pieces,'Estimation: '+e.heures_min+'-'+e.heures_max+' h x '+e.taux+' $/h = '+fmt(e.prix_min)+' à '+fmt(e.prix_max)+' (avant taxes, peinture non incluse)','Couleurs: '+(data.couleurs.join(', ')||'-'),'Autre couleur/code: '+(data.codes||'-'),'Conseils de couleurs: '+(data.conseil?'oui':'non'),'Début souhaité: '+(data.date_debut||'-'),'Date limite: '+(data.date_fin||'-'),'Dates flexibles: '+(data.flexible?'oui':'non'),'Adresse: '+(data.adresse||'-'),'Description: '+(data.description||'-'));
+   const r2=await fetch('https://formsubmit.co/ajax/'+SECOURS_EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_cc:SECOURS_CC,_subject:'Soumission – '+data.nom+' – '+data.pieces+' pièce(s)',_template:'table',_captcha:'false',_replyto:data.courriel,email:data.courriel,nom:data.nom,telephone:data.telephone,message:L.join('\n')})});
+   const j=await r2.json().catch(()=>({}));
+   ok=r2.ok&&String(j.success)!=='false';
+  }
+  if(!ok)throw new Error();
+  $('#formBody').style.display='none';$('#ok').style.display='block';$('#soumission').scrollIntoView({behavior:'smooth'});
+ }catch(x){err.textContent='Oups, l’envoi a échoué. Appelez Sandrine au 514-424-8733 ou écrivez à sandrine_454@hotmail.com.';btn.disabled=false;btn.textContent='Envoyer ma demande de soumission →'}
+});
+</script>
+</body>
+</html>
